@@ -1,0 +1,168 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Acerca de Nosotros {% endblock %}
+
+{% block content %}
+
+<main id="main">
+  <!-- ======= About Section ======= -->
+  <section class="about" data-aos="fade-up">
+    <div class="container">
+        {% if not info %}
+           <div class="alert alert-danger">No se a configurado ningun modelo para mostrar, porfavor cree un nuevo <strong>HTML Model en el panel administrativo</strong> para evitar errores</div>
+        {% endif %}
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="bi bi-check2-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section class="facts section-bg" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{ info.clients }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clientes </p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{ info.projects }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Proyectos</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{ info.support }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Horas de Servicio</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{ info.workers }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Colaboladores</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Our Skills Section ======= -->
+    <section class="skills" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Nuestras Habilidades</h2>
+          <p>Estas son las habilidades TECNICAS con las que Codey actualmente cuenta, estas se van mejorando dia a dia para lograr ofrecer al cliente un producto sin igual con los mejores diseños y la mejor inovación posible.</p>
+        </div>
+
+        <div class="skills-content">
+
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="{{ info.html_skills_percentage }}" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">HTML <i class="val">{{ info.html_skills_percentage }}%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="{{ info.css_skills_percentage }}" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">CSS <i class="val">{{ info.css_skills_percentage }}%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="{{ info.js_skills_percentage }}" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">JavaScript <i class="val">{{ info.js_skills_percentage }}%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="{{ info.py_skills_percentage }}" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Python <i class="val">{{ info.py_skills_percentage }}%</i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Skills Section -->
+
+    <!-- ======= Tetstimonials Section ======= -->
+    <section class="testimonials" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonios</h2>
+          <p>Este es el espacio que decidimos asignar para que los clientes que gusten opinar hacerca de nuestro producto puedan hacerlo libremente, en Codey intentamos darle a usted la mejor calidad.</p>
+        </div>
+
+        <div class="testimonials-carousel swiper">
+          <div class="swiper-wrapper">
+            {% for testimonial in testimonials %}
+            <div class="testimonial-item swiper-slide">
+              <img src="https://www.nicepng.com/png/detail/73-730154_open-default-profile-picture-png.png" class="testimonial-img" alt="">
+              <h3>{{testimonial.full_name}}</h3>
+              <h4>Cliente de Codey</h4>
+              <div class="ratings">
+                <span class="rating-color">{{testimonial.score}} <i class="bi bi-star-fill"></i> OBTENIDAS</span>
+              </div>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                {{ testimonial.comments|truncatewords:50 }}
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+          
+          <div class="swiper-pagination"></div>
+          {% if user.is_authenticated %}
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <button id="createNewTestimonialButton" class="btn btn-primary">Dar Testimonio</button>     
+                  <div id="testimonialsForm" style="display: none;">
+                    <div class="overlay">
+                      {% comment %} <button class="close-testimonial-from-button">X</button> {% endcomment %}
+                      <form method="post" class="mt-5 text-left">
+                        {{ testimonial_form|crispy }}
+                        {% csrf_token %} 
+                        <button type="submit" class="btn btn-success mt-3">Enviar Testimonio</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </section><!-- End Ttstimonials Section -->
+</main>
+
+{% endblock %}

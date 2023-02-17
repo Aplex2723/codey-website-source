@@ -1,0 +1,64 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Codey - Equipo{% endblock %}
+{% block content %}
+<main id="main">
+    <!-- ======= Team Section ======= -->
+    <section id="team-section" class="d-flex justify-content-center align-items-center animate__animated animate__fadeInDown">
+        <div class="container">
+
+            <h1 class="animate__animated animate__backInDown title-header">NUESTRO EQUIPO DE TRABAJO</h1>
+            <p class="text-center">En Codey nos preocupa la calidad de los projectos y trabajos que realizamos para nuestros clientes, todos nuestos coolaboradores esta capacitados.</p>
+        </div>
+    </section>
+    <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container team">
+        <div class="row">
+
+          {% for profile in profile_list %}
+            {% if profile.user.is_staff %}
+          
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                <div class="member-img">
+                    <img src="{{ profile.avatar.url }}" class="img-fluid" alt="" style="object-fit: cover;">
+                    <div class="social">
+                        {% if profile.facebook_url %}
+                            <a href="{{profile.facebook_url}}" target="_blank"><i class="bi bi-facebook"></i></a>
+                        {% endif %}
+                        {% if profile.twitter_url %} 
+                            <a href="{{profile.twitter_url}}" target="_blank"><i class="bi bi-twitter"></i></a> 
+                        {% endif %}
+                        {% if profile.instagram_url %} 
+                            <a href="{{profile.instagram_url}}" target="_blank"><i class="biu bi-instagram"></i></a>
+                        {% endif %}
+                        {% if profile.tiktok_url %} 
+                            <a href="{{profile.tiktok_url}}" target="_blank"><i class="biu bi-tiktok"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="member-info">
+                    {% if profile.user.get_full_name|length > 1 %}
+                        <h4>{{profile.user.get_full_name}}</h4>
+                    {% else %}
+                        <h4>Empleado de Codey</h4>
+                    {% endif %}
+                    {% if not profile.user.groups.first %}
+                        <span>Moderador de Codey</span>
+                    {% else %}
+                        <span>{{ profile.user.groups.first }}</span>
+                    {% endif %}
+                    {% if profile.bio %}
+                        <p>{{ profile.bio }}</p>
+                    {% else %}
+                        <p>Hola!, forma parte del equipo de Codey y me da gusto que estes visitando nuestra pagina.</p>
+                    {% endif %}
+                </div>
+                </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

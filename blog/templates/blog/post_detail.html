@@ -1,0 +1,183 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}{{post.title}}{% endblock %}
+{% block content %}
+
+{% if request.user.is_staff %}
+  {% comment %} <p><a href="{% url 'blog:update' page.id %}">Editar</a></p> {% endcomment %}
+{% endif %}
+   <section id="blog" class="blog mt-5">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="{{ post.image.url }}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="#">{{ post.title }}</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ post.author }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ post.published }}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">{{comments.count}} Comentario/s</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                {{ post.content|safe }}
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  {% for category in categories.all %} <!-- Busca todas las instancias de 1 -->
+                    <li><a href="{% url 'blog:category' category.id %}">{{category}}</a></li>
+                  {% endfor %}
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-author d-flex align-items-center">
+              <img src="{{ post.author.avatar.url }}" class="rounded-circle float-left" alt="">
+              <div>
+                {% if post.author.user.get_full_name|length > 1 %}
+                  <h4>{{post.author.user.get_full_name}}</h4>
+                {% else %}
+                  <h4>Escritor de Codey</h4>
+                {% endif %}
+                <div class="social-links">
+                  {% if post.author.facebook_url %}
+                    <a href="{{post.author.facebook_url}}" target="_blank"><i class="bi bi-facebook"></i></a>
+                  {% endif %}
+                  {% if post.author.twitter_url %} 
+                    <a href="{{post.author.twitter_url}}" target="_blank"><i class="bi bi-twitter"></i></a> 
+                  {% endif %}
+                  {% if post.author.instagram_url %} 
+                    <a href="{{post.author.instagram_url}}" target="_blank"><i class="biu bi-instagram"></i></a>
+                  {% endif %}
+                  {% if post.author.tiktok_url %} 
+                    <a href="{{post.author.tiktok_url}}" target="_blank"><i class="biu bi-tiktok"></i></a>
+                  {% endif %}
+                </div>
+                <p>
+                  {% if post.author.bio %}
+                    {{post.author.bio}}
+                  {% else %}
+                    Soy un escritor y moderador de esta magnifica pagina web, siguenos en todas nuestras redes sociales para no perderte de ninguna novedad!
+                  {% endif %}
+                </p>
+              </div>
+            </div><!-- End blog author bio -->
+
+            <div class="blog-comments">
+              <h4 class="comments-count">{{comments.count}} Comentario/s</h4>
+
+              {% for comment in comments %}
+                <div id="comment-1" class="comment">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="https://www.nicepng.com/png/detail/73-730154_open-default-profile-picture-png.png" alt=""></div>
+                    <div>
+                      <h5><a href="#" class="text-info">{{comment.name}}</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">{{comment.created}}</time>
+                      <p>
+                        {{ comment.content | linebreaks }}
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End comment #1 -->
+              {% endfor %}
+
+              {% comment %} <div id="comment-2" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div>
+                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <time datetime="2020-01-01">01 Jan, 2020</time>
+                    <p>
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                    </p>
+                  </div>
+                </div>
+
+                <div id="comment-reply-1" class="comment comment-reply">
+                  <div class="d-flex">
+                    <div class="comment-img"><img src="assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div>
+                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <time datetime="2020-01-01">01 Jan, 2020</time>
+                      <p>
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+
+                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+
+                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="comment-reply-2" class="comment comment-reply">
+                    <div class="d-flex">
+                      <div class="comment-img"><img src="assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div>
+                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                        <time datetime="2020-01-01">01 Jan, 2020</time>
+                        <p>
+                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div><!-- End comment reply #2-->
+
+                </div><!-- End comment reply #1-->
+
+              </div><!-- End comment #2--> {% endcomment %}
+
+              <div class="reply-form">
+                {% if new_comment %}
+                  <div class="alert alert-success" role="alert">
+                    Tu comentario se ha enviado!, <strong>esta en proceso de verificacion...</strong>
+                  </div>
+                {% else %}
+                  <h4>Deja un comentario 😎</h4>
+                  <p>Protegemos tu direccion de correo, no sera publico. Campos obligatorios marcados con * </p>
+                  <form method="post">
+                    {{ comment_form|crispy }} 
+                    {% csrf_token %}
+                  <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                  
+                </form>
+                {% endif %}
+                
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          {% include 'blog/category_list.html' %}
+
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+{% endblock %}
+

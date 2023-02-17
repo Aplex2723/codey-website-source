@@ -1,0 +1,37 @@
+
+<div class="col-lg-4">
+
+    
+<div class="sidebar">
+
+    <div class="search-form">
+    <form action="" class="searsh-form">
+        <input type="text" required class="search">
+        <button type="submit" class="button-no-bg"><i class="bi bi-search"></i></button>
+    </form>
+    </div><!-- End sidebar search formn-->
+
+    <h3 class="sidebar-title">Categorias</h3>
+    <div class="sidebar-item categories">
+    <ul>
+    {% for category in categories.all %} <!-- Busca todas las instancias de 1 -->
+        <li><a href="{% url 'blog:category' category.id %}">{{category}}</a></li>
+    {%endfor%}
+
+    </ul>
+    </div><!-- End sidebar categories-->
+        <h3 class="sidebar-title">Públicaciones Recientes</h3>
+        {% for post in post_list|slice:":5" %}
+        <div class="sidebar-item recent-posts">
+            <div class="post-item clearfix">
+                <img src="{{post.image.url}}" alt="">
+                <h4><a href="{% url 'blog:posts' post.slug %}">{{post.title}}</a></h4>
+                <time datetime="2020-01-01">{{post.published}}</time>
+            </div>
+        </div>
+        {% endfor %}
+    </div><!-- End sidebar recent posts-->
+
+</div><!-- End sidebar -->
+
+</div><!-- End blog sidebar -->

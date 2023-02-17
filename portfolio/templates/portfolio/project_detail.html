@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Codey - {{portfolio.title}}{% endblock  %}
+
+{% block content %}
+
+<main id="main">
+
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider">
+              <img src="{{project.images.url}}" class="img-fluid rounded">
+            </div>
+            {% comment %} <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div> {% endcomment %}
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Categorias</strong>: {% for category in project.categories.all %} {{category}}{% if project.categories.all|length > 1 and not forloop.last %}, {% endif %}{% endfor %}</li>
+                <li><strong>Cliente</strong>: {{project.client}}</li>
+                <li><strong>Fecha del Proyecto</strong>: {{project.project_date}}</li>
+                <li><strong>URL del Proyecto</strong>: <a href="{{project.project_website}}" target="_blank">{{project.project_website}}</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Detalles del pryecto elaborado</h2>
+              <p>
+                {{project.tech_used|safe}} 
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-5">
+          <h2>Detalles del proyecto realizado</h2>
+          {{project.content|safe}}
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+</main>
+
+{% endblock  %}

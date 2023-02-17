@@ -1,0 +1,88 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Codey - Blog{% endblock %}
+
+{% block content %}
+  <main id="main">
+    
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="row">
+          
+          <div class="col-lg-8 entries">
+          
+            {% for post in post_list %} <!-- Busca todas las instancias de 1 -->
+            <article class="entry">
+              
+              <div class="entry-img">
+                <img src="{{ post.image.url }}" alt="" class="img-fluid">
+              </div>
+              
+              <h2 class="entry-title">
+                <a href="{% url 'blog:posts' post.slug %}">{{ post.title }}</a>
+              </h2>
+              
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ post.author }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{ post.published}}</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                  {{ post.content|truncatechars_html:355|safe }}
+                <div class="read-more">
+                  <a href="{% url 'blog:posts' post.slug %}">Leer Mas</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+            {% endfor %}
+
+            {% if is_paginated %}
+              <div class="blog-pagination">
+                <ul class="justify-content-center">
+                  {% if page_obj.has_previous %}
+                    <li>
+                      <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                    </li>
+                  {% else %}
+                    <li class="disabled">
+                      <a href="#" tabindex="-1">&laquo;</a>
+                    </li>
+                  {% endif %}
+                  {% for i in paginator.page_range %}
+                    <li class="{% if page_obj.number == i %}active{% endif %}">
+                      <a href="?page={{i}}">{{i}}</a>
+                    </li>
+                  {% endfor %}
+                  {% if page_obj.has_next %}
+                  <li>
+                      <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+                    </li>
+
+                  {% else %}
+                    <li class="disabled">
+                      <a href="#" tabindex="-1">&raquo;</a>
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+            {% endif %}
+
+          </div><!-- End blog entries list -->
+
+          {% include 'blog/category_list.html' %}
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

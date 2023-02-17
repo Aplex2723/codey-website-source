@@ -1,0 +1,209 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<!-- <div class="container">
+  <div style="padding-top:50px; text-align:center;">
+      <h1>{{title}}</h1>
+    <p class="lead">CBV, autenticación, registros, perfiles y más</p>
+  </div>
+</div> -->
+
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="text-animate-fate-title">
+          Bienvenido a Codey
+      </div>
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Soluciones tecnológicas a tu <span>Alcance</span></h2>
+          <p class="animate__animated animate__fadeInUp">Somos Codey, tu mejor solución tecnológica para cualquier problema relacionado al área de tecnologías de la información e internet de las cosas a un precio único en la región.</p>
+          <a href="{% url 'services:services-main' %}" class="btn-get-started animate__animated animate__fadeInUp">Leer Más</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Precios accesibles</h2>
+          <p class="animate__animated animate__fadeInUp">En Codey apoyamos a las pequeñas empresas ofreciéndoles precios accesibles a sus necesidades, para poder aprovechar esta promoción especial de apertura, ¡contactanos!.</p>
+          <a href="{% url 'contact:contact-us'%}" class="btn-get-started animate__animated animate__fadeInUp">Contactanos</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">¡Descuentos increíbles!</h2>
+          <p class="animate__animated animate__fadeInUp">Por tiempo limitado, contamos con un precio especial para nuestros primeros clientes, si estás interesado o aún no sabes bien lo que tu empresa necesita para mejorar tus ventas o campañas, ¡contactanos inmediatamente!.</p>
+          <a href="{% url 'contact:contact-us'%}" class="btn-get-started animate__animated animate__fadeInUp">Contactanos</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Liberta de Eleccion</a></h4>
+              <p class="description">Escoge el diseño que quieras o permite que creemos el tuyo.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Documentación</a></h4>
+              <p class="description">Todos nuestros servicios incluyen documentacion sin costo adicional.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Máximo Rendimiento</a></h4>
+              <p class="description">Tus páginas/aplicaciones funcionaran lo mejor posible y seran lo mas automatizadas posibles.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Globalización</a></h4>
+              <p class="description">Contrata nuestros servicios desde cualquier parte del mundo.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row row-why-us">
+          <div class="col-lg-6 video-box">
+            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Nuestras Ventajas</h2>
+          <p>Contamos con un equipo de profesionales que nos ayudan a entregar el mejor trabajo posible en el menor tiempo posible.</p>
+        </div>
+
+        <div class="row" >
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="{% static 'core/img/services-img-1.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4 " data-aos="fade-up">
+            <h3>Ofrecemos varios tipos de servicios.</h3>
+            <p class="fst-italic">
+              Si tienes poco presupuesto y quieres una entrega mas rapida, contamos con servicios express, nuestros servicios más personalizados conlleva lo siguiente:
+
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Plantilla dedicada al gusto del cliente.</li>
+              <li><i class="bi bi-check"></i> Sistemas avanzados de gestión.</li>
+              <li><i class="bi bi-check"></i> Aplicaciones web robustas.</li>
+              <li><i class="bi bi-check"></i> Mantenimiento y gestión de Servidores Virtuales Privados (VPS).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" >
+          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+            <img src="{% static 'core/img/ai-img-1.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>Nuestros sistemas de Inteligencia Artificial</h3>
+            <p class="fst-italic">
+              En Codey nos fascina la Inteligencia Artificial y como esta ayuda cada vez a más empresas a mejorar tanto sus ventas, como a prevenir posibles pérdidas de clientes o dinero.
+
+            </p>
+            <p>
+              Ofrecemos un sistema complejo de Chatbots gestionados por una IA (Inteligencia artificial) la cual responderá preguntas básicas y hasta complejas de tus clientes, ahorrando mucho tiempo.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="{% static 'core/img/ai-img-2.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5" data-aos="fade-up">
+            <h3>El uso de la Inteligencia Artificial en Codey</h3>
+            <p>Si estás interesado en alguno de nuestros servicios los cuales contienen IA te comentamos algunos puntos fuertes de nosotros.</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Uso de Inteligencia Artificial para una atención al cliente más eficiente (Chatbots).</li>
+              <li><i class="bi bi-check"></i> Entrenamiento de redes neuronales para detección de imágenes.</li>
+              <li><i class="bi bi-check"></i> Creación de bots personalizados (Discord, Whatsapp, Messenger, Slack, etc).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+            <img src="{% static 'core/img/developer-img-1.svg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>Únete a la comunidad Codey</h3>
+            <p>
+              Si eres un programador que apenas va comenzando, contacta con nosotros, podrás aprender muchas cosas las cuales te servirán para tu futuro como profesionista, lo que nos diferencia de los demás, es que si estas estudiando una carrera a fin de TI (tecnologías de la información) o Ciencias Computacionales sin importar el semestre te podemos apoyar en tu formación.
+              
+            </p>
+
+            <a href="{% url 'contact:contact-us'%}" class="btn-get-started ">Unete</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

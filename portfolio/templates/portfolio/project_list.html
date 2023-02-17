@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Codey - Portafolio{% endblock  %}
+
+{% block content %}
+<main id="main">
+    <section id="content-hero" class="d-flex justify-content-center align-items-center animate__animated animate__fadeInDown">
+        <h1 class="animate__animated animate__backInDown title-header">PORTAFOLIO DE TRABAJO</h1>
+    </section>
+    <section class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              {% for category in categories.all %}
+                <li data-filter=".filter-{{ category|lower }}">{{category}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+          {% for project in project_list %} 
+          <div class="col-lg-4 col-md-6 portfolio-wrap {% for category in project.categories.all %} filter-{{ category|lower }} {% endfor %} ">
+            <div class="portfolio-item">
+              <img src="{{project.images.url}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h3>{{project.title}}</h3>
+                <div>
+                  <a href="{{project.images.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{project.title}}"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'portfolio:project' project.slug %}" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+</main>
+
+{% endblock  %}
