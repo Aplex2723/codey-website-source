@@ -1,0 +1,5 @@
+django
+django-ckeditor
+django-crispy-froms==1.14.0
+Pillow
+psycopg2-binary
