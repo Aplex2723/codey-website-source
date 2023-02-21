@@ -1,4 +1,3 @@
-import uuid
 import pathlib
 
 from django.db import models
@@ -15,7 +14,7 @@ def custom_upload_to(instance, filename):
 # Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(upload_to=custom_upload_to, default="no-avatar.jpg") #Para anadir imagenes, es necesario tener instalada la libreria pilow y configurar en setting.py
+    avatar = models.ImageField(upload_to=custom_upload_to) #Para anadir imagenes, es necesario tener instalada la libreria pilow y configurar en setting.py
     bio = models.TextField(null=True, blank=True)
     link = models.URLField(max_length=200, null=True, blank=True)
     facebook_url = models.URLField(max_length=200, null=True, blank=True)

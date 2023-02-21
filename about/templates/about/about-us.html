@@ -122,7 +122,7 @@
           <div class="swiper-wrapper">
             {% for testimonial in testimonials %}
             <div class="testimonial-item swiper-slide">
-              <img src="https://www.nicepng.com/png/detail/73-730154_open-default-profile-picture-png.png" class="testimonial-img" alt="">
+              <img src="{% static 'core/img/no-avatar.png' %}" class="testimonial-img" alt="">
               <h3>{{testimonial.full_name}}</h3>
               <h4>Cliente de Codey</h4>
               <div class="ratings">

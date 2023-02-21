@@ -55,7 +55,11 @@
             </article><!-- End blog entry -->
 
             <div class="blog-author d-flex align-items-center">
-              <img src="{{ post.author.avatar.url }}" class="rounded-circle float-left" alt="">
+              {% if not post.author.avatar.url %}
+                <img src="{% static 'core/img/no-avatar.png' %}" class="rounded-circle float-left" alt="">
+              {% else %}
+                <img src="{{ post.author.avatar.url }}" class="rounded-circle float-left" alt="">
+              {% endif %}
               <div>
                 {% if post.author.user.get_full_name|length > 1 %}
                   <h4>{{post.author.user.get_full_name}}</h4>
@@ -92,7 +96,7 @@
               {% for comment in comments %}
                 <div id="comment-1" class="comment">
                   <div class="d-flex">
-                    <div class="comment-img"><img src="https://www.nicepng.com/png/detail/73-730154_open-default-profile-picture-png.png" alt=""></div>
+                    <div class="comment-img"><img src="{% static 'core/img/no-avatar.png' %}" alt=""></div>
                     <div>
                       <h5><a href="#" class="text-info">{{comment.name}}</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                       <time datetime="2020-01-01">{{comment.created}}</time>
