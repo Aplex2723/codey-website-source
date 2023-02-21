@@ -27,6 +27,8 @@ from services.urls import services_patterns
 from contact.urls import contact_patterns
 
 urlpatterns = [
+        path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+        path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
         path('admin/', admin.site.urls),
         path('paginas/', include(pages_patterns)),
         path('', include('core.urls')),

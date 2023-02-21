@@ -3,3 +3,7 @@ django-ckeditor
 django-crispy-froms==1.14.0
 Pillow
 psycopg2-binary
+django-jet-reboot
+google-api-python-client==1.4.1
+django-colorfield
+django-image-uploader-widget

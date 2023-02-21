@@ -12,4 +12,3 @@ class HomePageView(TemplateView):
     
 class SamplePageView(TemplateView):
   template_name = 'core/sample.html'
-

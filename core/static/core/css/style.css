@@ -175,6 +175,97 @@ a:hover {
   background-color: var(--bg-color);
 }
 
+
+/* 
+Seccion de servicios
+*/
+.card-services {
+  background-color: var(--bg-color);
+}
+
+@-webkit-keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+.service-wrapper {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 45px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .content .title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 500;
+}
+
+.service-wrapper .big-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper:hover {
+  -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+          box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+  background: var(--bg-color-2);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  border-color: transparent !important;
+}
+
+.service-wrapper:hover .icon {
+  background: var(--color-red-3) !important;
+  color: #ffffff !important;
+}
+
+.service-wrapper:hover .big-icon {
+  z-index: -1;
+  opacity: 0.1;
+  font-size: 160px;
+}
+
+.text-custom {
+    color: var(--color-red-3) !important;
+}
+
+.uim-svg {
+    display: inline-block;
+    height: 1em;
+    vertical-align: -0.125em;
+    font-size: inherit;
+    fill: var(--uim-color, currentColor);
+}
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -281,7 +372,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 15px 10px 15px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -1346,8 +1437,8 @@ section {
 
 .service-details .card-body {
   z-index: 10;
-  background: #fff;
-  border-top: 4px solid #fff;
+  background-color: var(--bg-color-2);
+  /*border-top: 4px solid #fff;*/
   padding: 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   margin-top: -60px;
@@ -1366,11 +1457,11 @@ section {
 }
 
 .service-details .card-text {
-  color: #5e5e5e;
+  color: #f0f0f0;
 }
 
 .service-details .read-more a {
-  color: #777777;
+  color: #0089e4;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -1380,13 +1471,26 @@ section {
 .service-details .read-more a:hover {
   color: var(--color-red-3);
 }
-
+.services-head-section{
+  background-color: var(--bg-color-2);
+  border-radius: 88% 12% 98% 2% / 8% 86% 14% 92% ;
+  box-shadow: 0px 0px 50px rgba(0, 68, 255, 0.15);
+  padding-left: 30px;
+  padding-right: 40px;
+}
+.services-head-section h3{
+  color: var(--color-red-3);
+  font-weight: 700;
+}
+.service-details .card {
+  background-color: var(--bg-color);
+}
 .service-details .card:hover img {
   transform: scale(1.1);
 }
 
 .service-details .card:hover .card-body {
-  border-color: var(--color-red-3);
+  border-color: var(--color-red-2);
 }
 
 .service-details .card:hover .card-body .card-title a {
@@ -1403,8 +1507,9 @@ section {
 .pricing .box {
   padding: 40px;
   margin-bottom: 30px;
-  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
-  background: #fff;
+  box-shadow: 0px 0px 50px rgba(0, 68, 255, 0.15);
+  background: var(--bg-color);
+  border-radius: 15px;
   text-align: center;
 }
 
@@ -1423,7 +1528,7 @@ section {
 }
 
 .pricing h4 span {
-  color: #bababa;
+  color: #ffffff;
   font-size: 18px;
   display: block;
 }
@@ -1431,7 +1536,7 @@ section {
 .pricing ul {
   padding: 0;
   list-style: none;
-  color: #999;
+  color: #ffffff;
   text-align: left;
   line-height: 20px;
 }
@@ -1463,7 +1568,7 @@ section {
   display: inline-block;
   padding: 6px 30px;
   border-radius: 20px;
-  color: #fff;
+  color: #000000;
   transition: none;
   font-size: 14px;
   font-weight: 400;

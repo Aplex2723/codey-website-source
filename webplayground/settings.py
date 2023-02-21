@@ -34,6 +34,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #Importante poner la app registration arriba del todo, ya que es principal
     'registration',
+    # Importando el tema jet para el panel de administrador
+    'jet.dashboard',
+    'jet',
     # 'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +56,8 @@ INSTALLED_APPS = [
     'contact',
     #   Crispy Forms para una mejor vista
     'crispy_forms',
+    #   Administrador de imagenes
+    'image_uploader_widget',
 ]
 
 #!  Requerimiento del plugin CRISPY FORMS
