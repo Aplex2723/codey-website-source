@@ -5,6 +5,14 @@
 
 {% block content %}
 
+<head>
+  <style>
+    .proyect-section p img {
+      height: auto !important;
+      width: 100% !important;
+    }
+  </style>
+</head>
 <main id="main">
 
     <section id="portfolio-details" class="portfolio-details">
@@ -15,6 +23,10 @@
           <div class="col-lg-8">
             <div class="portfolio-details-slider">
               <img src="{{project.images.url}}" class="img-fluid rounded">
+              <div class="proyect-section mt-5">
+                <h2 class='fw-bold'>Detalles del proyecto realizado</h2>
+                {{project.content|safe}}
+              </div>
             </div>
             {% comment %} <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
@@ -37,7 +49,7 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Información del Proyecto</h3>
               <ul>
                 <li><strong>Categorias</strong>: {% for category in project.categories.all %} {{category}}{% if project.categories.all|length > 1 and not forloop.last %}, {% endif %}{% endfor %}</li>
                 <li><strong>Cliente</strong>: {{project.client}}</li>
@@ -46,7 +58,7 @@
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>Detalles del pryecto elaborado</h2>
+              <h2>Detalles del proyecto elaborado</h2>
               <p>
                 {{project.tech_used|safe}} 
               </p>
@@ -55,10 +67,6 @@
 
         </div>
 
-        <div class="mt-5">
-          <h2>Detalles del proyecto realizado</h2>
-          {{project.content|safe}}
-        </div>
 
       </div>
     </section><!-- End Portfolio Details Section -->

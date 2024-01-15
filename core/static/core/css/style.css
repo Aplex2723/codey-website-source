@@ -12,6 +12,7 @@ body {
   font-family: 'Montserrat';
   color: var(--color-white);
   background-color: var(--bg-color);
+  height: 100%;
 }
 
 a {
@@ -34,6 +35,8 @@ a:hover {
   --color-red-1: #234163;
   --color-red-2: #2e5d96;
   --color-red-3: #3FC8D4;
+
+  --color-morado-1: #8318cb;
 }
 
 .rating-color{
@@ -307,7 +310,6 @@ Seccion de servicios
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: var(--bg-color);
 }
 
 #header.header-transparent {
@@ -1650,7 +1652,7 @@ section {
 }
 
 .portfolio .portfolio-item {
-  background: var(--color-red-3);
+  background: #000000;
   overflow: hidden;
   min-height: 200px;
   position: relative;

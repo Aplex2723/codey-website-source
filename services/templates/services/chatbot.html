@@ -1,0 +1,390 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}{% endblock title %}
+
+{% block content %}
+    <main id='main'>
+        <div class="blob-container">
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <!-- Agregar más blobs según sea necesario -->
+        </div>
+
+        <div class='pb-5'>
+            <div class='container px-5 pb-5'>
+                <div class='row gx-5 align-items-center'>
+                    <div class='col-xxl-5'>
+                        <div class='text-center text-xxl-start'>
+                            <div class='badge bg-gradient-primary-to-secondary text-white mb-4 animate__animated animate__backInDown'>
+                                <div class='text-uppercase'>Inova · Automatiza · Expandete</div>
+                            </div>
+                            <div class='fs-3 fw-light text-secondary-emphasis'>
+                                Incremente tu tiempo de respuesta y reduce gastos
+                            </div>
+                            <h1 id='header-text' class='display-3 fw-bolder mb-5 animate__animated animate__fadeInDown' >
+                                <span class='text-gradient d-inline'>
+                                Obtén tu ChatBot con IA en</span> <span class='text-success'>Mé</span>xi<span class='text-danger'>co</span>
+                                
+                            </h1>
+                            <div class='d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3'>
+                                <a class='btn bg-gradient-primary-to-secondary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder animate__animated animate__bounce animate__repeat-3' href="#">Contáctanos</a>
+                                <a class='btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder' href="">Proyectos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7">
+                        <!-- Header profile picture-->
+                        <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                            <div class="profile bg-gradient-primary-to-secondary">
+                                <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
+                                <!-- Watch a tutorial on how to do this on YouTube (link)-->
+                                <img class="profile-img " src="{% static 'core/img/services/chatbot/image-1.webp' %}" alt="..." />
+                                <div class="dots-1 ">
+                                    <!-- SVG Dots-->
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                                        </g>
+                                    </svg>
+                                    <!-- END of SVG dots-->
+                                </div>
+                                <div class="dots-2 animate__animated animate__fadeInTopRight">
+                                    <!-- SVG Dots-->
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                                        </g>
+                                    </svg>
+                                    <!-- END of SVG dots-->
+                                </div>
+                                <div class="dots-3 animate__animated animate__fadeInTopLeft">
+                                    <!-- SVG Dots-->
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                                        </g>
+                                    </svg>
+                                    <!-- END of SVG dots-->
+                                </div>
+                                <div class="dots-4 ">
+                                    <!-- SVG Dots-->
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
+                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
+                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
+                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
+                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
+                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
+                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
+                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
+                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
+                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
+                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
+                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
+                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
+                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
+                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
+                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
+                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
+                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
+                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
+                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
+                                        </g>
+                                    </svg>
+                                    <!-- END of SVG dots-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class='chatbot-cards'>
+            <div class='overlap-text mb-5'>
+                <h1 class='fs-1 fw-bold'>BENEFICIOS</h1>
+                <h2>BENEFICIOS</h2>
+            </div>
+            <div class="container">
+                <div class="box" data-aos="zoom-in-up">
+                    <span></span>
+                    <div class="content">
+                    <h2 class='fw-bold'>Satisfacción del cliente</h2>
+                    <p>Proporcina atención al cliente <b>24/7</b>, lo que puede ser muy útil para los clientes que necesitan ayuda fuera del horario de oficina.</p>
+                    </div>
+                </div>
+                <div class="box " data-aos="zoom-in-down">
+                    <span></span>
+                    <div class="content">
+                    <h2 class='fw-bold'>Reduce costos</h2>
+                    <p>Automatiza tareas que normalmente serían realizadas por agentes humanos, lo que puede liberar tiempo para que los agentes se centren en tareas más complejas.</p>
+                    </div>
+                </div>
+                <div class="box"  data-aos="zoom-in-left">
+                    <span></span>
+                    <div class="content">
+                    <h2 class='fw-bold'>Personalización</h2>
+                    <p>Recopila datos sobre los clientes para personalizar la experiencia de atención al cliente, automatiza complejas tareas dentro de un sistema o aplicación.</p>
+                    <a href="#">Saber más</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <section class='detail-benefits-section'>
+            <div class='container'>
+                <div class='mb-5 row d-flex justify-content-around align-items-center'>
+                    <div class='col-md-5' data-aos="fade-up-right">
+                        <h1 class='fs-1 fw-bold'>Disponibilidad 24/7</h1>
+                        <p class=''>Los chatbots no duermen ni toman descansos. Están disponibles las 24 horas del día, los 7 días de la semana, para atender las necesidades de sus clientes. 
+                            Esto garantiza un servicio consistente y una respuesta inmediata, lo que mejora la satisfacción del cliente y la retención.</p>
+                    </div>
+                    <div class='col-md-4'>
+                        <img  class='img-fluid' data-aos="fade-up" src="{% static 'core/img/services/chatbot/reason-img-2.svg' %}" alt="">
+                    </div>
+                </div>
+                <div class='my-5 py-5 row d-flex justify-content-around align-items-center'>
+                    <div class='col-md-4'>
+                        <img class='img-fluid' data-aos="fade-down" src="{% static 'core/img/services/chatbot/reason-img-1.svg' %}" alt="">
+                    </div>
+                    <div class='col-md-5' data-aos="fade-up-right">
+                        <h1 class='fs-1 fw-bold'>Aumenta la eficiencia con un ChatBot</h1>
+                        <p class=''>Chatbots programados para realizar tareas de rutina con precisión y rapidez suena interesante, ¿no?. 
+                            Libera a sus empleados de tareas repetitivas, permitiéndoles enfocarse en proyectos más estratégicos y valiosos, 
+                            mejora significativa de la eficiencia operativa y una reducción de los costos laborales.</p>
+                    </div>
+                </div>
+                <div class='my-5 py-5 row d-flex justify-content-around align-items-center'>
+                    <div class='col-md-6'>
+                        <h1 data-aos="fade-up-right" class='fs-1 fw-bold'>Avanzar en tu industria y satisface la demanda cambiante de tus clientes</h1>
+                        <ul class='list-group'>
+                            <li data-aos="zoom-in-up" class="d-flex gap-4 align-items-center list-group-item fs-5"><i class="text-gradient fa-solid fa-earth-americas"></i>  Atención Multilingüe</li>
+                            <li data-aos="zoom-in-up" class="d-flex gap-4 align-items-center list-group-item fs-5"><i class="text-gradient fa-solid fa-money-bill-trend-up"></i>  Generación de Leads y Ventas</li>
+                            <li data-aos="zoom-in-up" class="d-flex gap-4 align-items-center list-group-item fs-5"><i class="text-gradient fa-solid fa-users-rectangle"></i>  Mayor Retención de Clientes</li>
+                            <li data-aos="zoom-in-up" class="d-flex gap-4 align-items-center list-group-item fs-5"><i class="text-gradient fa-solid fa-comments"></i>  Atención Multicanal</li>
+                            <li data-aos="zoom-in-up" class="d-flex gap-4 align-items-center list-group-item fs-5"><i class="text-gradient fa-solid fa-bolt"></i>  Mejora de la Imagen de Marca</li>
+                        </ul>
+                    </div>
+                    <div class='col-md-4' >
+                        <img class='img-fluid' data-aos="fade-up" src="{% static 'core/img/services/chatbot/reason-img-3.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class='success-case-section'>
+            <div class='container'>
+                <center>
+                    <h2 class='mt-5 fs-3 fw-light text-warning'>Caso de Exito</h2>
+                    <h1 class='py-5 fs-1 fw-bold color-bibli'>Bibli.ai</h1>
+                </center>
+                
+                <div class='row gap-5 py-4 d-flex justify-content-center align-items-center'>
+                    <div class='image-div-left col-md-5'>
+                        <img class='img-fluid' src="{% static 'core/img/services/chatbot/bibli-img-1.webp' %}" alt="">
+                    </div>
+                    <div class='col-md-6 text-div'>
+                        <h1 class='fw-bold fs-1'>El primer maestro de Idiomas en WhatsApp</h1>
+                        <p class='fw-light fs-5'>Con Bibli podras aprender y practicar cualquier lenguaje que quieras, el sistema que creamos
+                            es capaz de ofrecerte una experiencia de registro unica, el te guiara en todo el proceso y tambien te explicara como
+                            funciona el servicio.
+                        </p>
+
+                    </div>
+                </div>
+                <div class='row py-4 gap-5 my-5 d-flex justify-content-center align-items-center'>
+                    <div class='col-md-6'>
+                        <div class='text-div text-end'>
+                            <h1 class='fw-bold fs-1'>Historias diarias en multiples idiomas</h1>
+                            <p class='fw-light fs-5'>Bibli creará una historia en el idioma que el usuario desee aprender, con el objetivo de practicar
+                                sus conocimientos en cualquier idioma que desee aprender o mejorar, con una experiencia unica que querrás seguir
+                                mejorando tus habilidades comunicativas y gramaticas.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class='image-div-right col-md-5'>
+                        <img class='img-fluid' src="{% static 'core/img/services/chatbot/bibli-img-1.webp' %}" alt="">
+                    </div>
+                </div>
+                <div class='row py-5 d-flex justify-content-center align-content-center'>
+                    <div class='col-md-4'>
+                        <h1 class='fw-bold mb-4 color-bibli'>Historias en PDF <i class="fs-1 fa-solid fa-file-pdf"></i></h1>
+                        <p>Lleva contigo las historias a donde quiera que vayas, <b>Bibli</b> te enviara documentos PDF mediante <b>WhatsApp</b>
+                        </p>
+                    </div>
+                    <div class='col-md-4'>
+                        <h1 class='fw-bold mb-4 color-bibli'>Audios MP3 <i class="fa-solid fa-file-audio"></i></h1>
+                        <p>En cada historia podras disfurtar de un audio, <b>Bibli</b> te enviara un archivo de audio MP3 donde podras escuchar la pronunciacion 
+                            y seguir la historia con la mejor experiencia posible
+                        </p>
+                    </div>
+                    <div class='col-md-4'>
+                        <h1 class='fw-bold mb-4 color-bibli'>Quiz Interactivo <i class="fa-solid fa-circle-question"></i></h1>
+                        <p>Acompaña cada historia dada por <b>Bibli</b> con una serie de preguntas relacionadas con la historia, ¡Consigue posicionarte en los mejores en el idioma!
+                        </p>
+                    </div>
+                </div>
+                <div class='py-5'> 
+                    <center>
+                        <h2>Mira a <b class='color-bibli'>Bibli</b> en acción</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Miydkti_QVE?si=JCFQhCipf-gqGPDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </center>
+                </div>
+            </div>
+        </section>
+
+        <section class='about-section'>
+            
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-8 col-md-7">
+                <div class="jelly-card">
+                          <div class="card py-3 ">
+                    
+                    <div class="row">
+                    <div class="col-10 col-md-4 col-lg-2 jelly-bloc text-center text-md-start">
+                        <img src="{% static 'core/img/services/chatbot/about-img-1.png' %}" class="card-img-top card-pic slowfloat2s" alt="meduse">
+                      </div>
+                        <div class="col-12 col-md-8 col-lg-9">
+                        <div class="card-body">
+                          <h5 class="card-title fs-3 fw-bold text-gradient">
+                            Pero... ¿Por qué lo necesito?
+                          </h5>
+                          <div class="line"></div>
+                          <p class="card-text">
+                            Un chatbot es capaz de mejorar la eficiencia operativa, la experiencia del cliente y la capacidad de una empresa para gestionar un gran volumen de consultas.
+                             Además, puede contribuir a la retención de clientes y proporcionar datos valiosos para la toma de decisiones estratégicas. <b>¡No te quedes atrás!</b>
+                          </p>
+                           <i class="fa-solid fa-headset slowfloat3s"></i>
+                        </div>
+                    </div>
+                    </div>
+                        </div>
+                </div>
+              </div>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-md-4 py-md-5 px-5 '>
+                        <img data-aos="flip-up" class='img-fluid my-md-5 py-2 px-5 opacity-27' src="{% static 'core/img/services/chatbot/google-white-logo.png' %}" alt="">
+                        <img data-aos="flip-up" class='img-fluid my-md-5 py-2 px-5 opacity-27' src="{% static 'core/img/services/chatbot/ibm-white-logo.png' %}" alt="">
+                    </div>
+                    <div class='col-md-4 py-md-5 px-5'>
+                        <img data-aos="flip-down" class='img-fluid my-md-5 py-2 px-5 opacity-27' src="{% static 'core/img/services/chatbot/openai-white-logo.png' %}" alt="">
+                        <img data-aos="flip-down" class='img-fluid my-md-5 py-2 px-5 opacity-27' src="{% static 'core/img/services/chatbot/azure-white-logo.png' %}" alt="">
+                    </div>
+                    <div class='col-md-4 py-md-5 px-5'>
+                        <img data-aos="flip-up" class='img-fluid my-md-5 py-2 px-5 opacity-27' src="{% static 'core/img/services/chatbot/aws-white-logo.png' %}" alt="">
+                        <img data-aos="flip-up" class='img-fluid my-md-5 py-2 px-5 opacity-27' src="{% static 'core/img/services/chatbot/twilio-white-logo.png' %}" alt="">
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        const movingDiv = document.querySelector('.dots-1');
+        const secondDot = document.querySelector('.dots-4');
+        
+        // Define the animation
+        const tl_1 = gsap.timeline({ repeat: -1 }); // Infinite loop
+        const tl_2 = gsap.timeline({ repeat: -1 }); // Infinite loop
+
+
+        tl_1.to(movingDiv, {
+            y: 100, // Move down
+            duration: 6,
+            ease: 'power1.inOut',
+        });
+        
+        tl_1.to(movingDiv, {
+            y: 0, // Move up
+            duration: 5,
+            ease: 'power1.inOut',
+        });
+
+        tl_2.to(secondDot, {
+            y: -200,
+            duration: 7,
+            ease: 'power1.inOut'
+        })
+        tl_2.to(secondDot, {
+            y: 0,
+            duration: 7,
+            ease: 'power1.inOut'
+        })
+    </script>
+
+{% endblock content %}
