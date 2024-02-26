@@ -1,5 +1,5 @@
 :root {
-  --color-red-3: #3FC8D4;
+  --color-red-3: rgb(63, 200, 212);
   --color-bibli: rgb(71,32,183);
   --color-morado-1: rgb(133, 24, 205)
 }
@@ -601,11 +601,31 @@ section.success-case-section .image-div-left {
   background: #ffff;
   border-radius: 5rem 1.5rem 1.5rem 5rem;
   box-shadow: -10px 0 40px 0 var(--color-morado-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita que la imagen se salga del div */
+  height: 500px; /* Ajusta a la altura deseada */
+  padding: 0 !important;
 }
 section.success-case-section .image-div-right {
   background: #ffff;
   border-radius: 1.5rem 5rem 5rem 1.5rem;
   box-shadow: 10px 0 40px 0 var(--color-red-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita que la imagen se salga del div */
+  height: 500px; /* Ajusta a la altura deseada */
+  padding: 0 !important;
+}
+
+.image-div-left img, .image-div-right img {
+  flex-shrink: 0; /* Previene que la imagen se encoja */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* Cubre el área sin perder las proporciones */
+
 }
 
 .text-color-blue {
@@ -614,4 +634,34 @@ section.success-case-section .image-div-right {
 
 .color-bibli {
   color: var(--color-bibli) !important;
+}
+
+.bibli-cards-info h1{
+  background-color: var(--color-bibli) !important;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px 0.1px rgba(63, 200, 212, 0.27);
+}
+
+.bibli-cards-info {
+  padding: 0 25px;
+}
+
+.bibli-cards-info p {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.blibli-social-icons {
+  margin-top: 3rem;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+}
+.blibli-social-icons a i {
+  color: #c0daff; 
+  font-size: 70px; 
 }

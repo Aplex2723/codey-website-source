@@ -7,3 +7,4 @@ django-jet-reboot
 google-api-python-client==1.4.1
 django-colorfield
 django-image-uploader-widget
+mysqlclient

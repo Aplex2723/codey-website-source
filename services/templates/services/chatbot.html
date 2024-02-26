@@ -1,6 +1,6 @@
 {% extends "core/base.html" %}
 {% load static %}
-{% block title %}{% endblock title %}
+{% block title %}Chatbots para tí{% endblock title %}
 
 {% block content %}
     <main id='main'>
@@ -239,13 +239,13 @@
         <section class='success-case-section'>
             <div class='container'>
                 <center>
-                    <h2 class='mt-5 fs-3 fw-light text-warning'>Caso de Exito</h2>
+                    <h2 class='mt-5 fs-1 fw-bold text-warning'>Caso de Exito</h2>
                     <h1 class='py-5 fs-1 fw-bold color-bibli'>Bibli.ai</h1>
                 </center>
                 
                 <div class='row gap-5 py-4 d-flex justify-content-center align-items-center'>
                     <div class='image-div-left col-md-5'>
-                        <img class='img-fluid' src="{% static 'core/img/services/chatbot/bibli-img-1.webp' %}" alt="">
+                        <img class='img-fluid' src="{% static 'core/img/services/chatbot/img_bibli_1.png' %}" alt="">
                     </div>
                     <div class='col-md-6 text-div'>
                         <h1 class='fw-bold fs-1'>El primer maestro de Idiomas en WhatsApp</h1>
@@ -268,31 +268,42 @@
                         </div>
                     </div>
                     <div class='image-div-right col-md-5'>
-                        <img class='img-fluid' src="{% static 'core/img/services/chatbot/bibli-img-1.webp' %}" alt="">
+                        <img class='img-fluid' src="{% static 'core/img/services/chatbot/img_bibli_2.png' %}" alt="">
                     </div>
                 </div>
                 <div class='row py-5 d-flex justify-content-center align-content-center'>
-                    <div class='col-md-4'>
-                        <h1 class='fw-bold mb-4 color-bibli'>Historias en PDF <i class="fs-1 fa-solid fa-file-pdf"></i></h1>
+                    <div class='col-md-4 bibli-cards-info'>
+                        <h1 class='fw-bold mb-4 '>Historias en PDF <span></span><i class="fs-1 fa-solid fa-file-pdf"></i></h1>
                         <p>Lleva contigo las historias a donde quiera que vayas, <b>Bibli</b> te enviara documentos PDF mediante <b>WhatsApp</b>
                         </p>
                     </div>
-                    <div class='col-md-4'>
-                        <h1 class='fw-bold mb-4 color-bibli'>Audios MP3 <i class="fa-solid fa-file-audio"></i></h1>
+                    <div class='col-md-4 bibli-cards-info'>
+                        <h1 class='fw-bold mb-4 '>Audios en MP3 <span></span><i class="fa-solid fa-file-audio"></i></h1>
                         <p>En cada historia podras disfurtar de un audio, <b>Bibli</b> te enviara un archivo de audio MP3 donde podras escuchar la pronunciacion 
                             y seguir la historia con la mejor experiencia posible
                         </p>
                     </div>
-                    <div class='col-md-4'>
-                        <h1 class='fw-bold mb-4 color-bibli'>Quiz Interactivo <i class="fa-solid fa-circle-question"></i></h1>
+                    <div class='col-md-4 bibli-cards-info'>
+                        <h1 class='fw-bold mb-4 '>Quiz Interactivo <span></span><i class="fa-solid fa-circle-question"></i></h1>
                         <p>Acompaña cada historia dada por <b>Bibli</b> con una serie de preguntas relacionadas con la historia, ¡Consigue posicionarte en los mejores en el idioma!
                         </p>
                     </div>
                 </div>
-                <div class='py-5'> 
+                <div class='py-5 bibli-links'> 
                     <center>
                         <h2>Mira a <b class='color-bibli'>Bibli</b> en acción</h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Miydkti_QVE?si=JCFQhCipf-gqGPDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <a href="https://www.bibli.ai/">Bibli Website</a>
+                        <div class="blibli-social-icons">
+                            <a href="https://www.instagram.com/bibli.latam/" target="_blank">
+                              <i class="fab fa-instagram" ></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ms-bibli-a778982b2/" target="_blank">
+                              <i class="fab fa-linkedin" ></i>
+                            </a>
+                            <a href="https://www.bibli.ai/chat" target="_blank">
+                              <i class="fab fa-whatsapp"></i>
+                            </a>
+                          </div>
                     </center>
                 </div>
             </div>

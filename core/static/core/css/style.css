@@ -39,6 +39,16 @@ a:hover {
   --color-morado-1: #8318cb;
 }
 
+
+.promotion-banner{
+  background-color: var(--bg-color-2);
+  /* display: flex; */
+  margin: 2rem 0;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
 .rating-color{
     font-weight: bold;
     color:#fbc634 !important;
@@ -268,6 +278,20 @@ Seccion de servicios
     fill: var(--uim-color, currentColor);
 }
 
+/* Chatbot button section */
+.btn-chatbot {
+  background-color: var(--bg-color-3);
+  padding: 13px 30px;
+  border-radius: 20px;
+  color: aqua;
+  font-size: 32px;
+  font-weight: 700;
+  border: 1px solid aqua;
+}
+
+.btn-chatbot:hover {
+  border: 1px solid white;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
